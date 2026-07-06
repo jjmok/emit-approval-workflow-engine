@@ -1,0 +1,1 @@
+This slice is done. Update docs/feature-checklist.md — flip the relevant rows to ✅ (or 🟡 if partial), fill in the Spec ref, then commit with message: docs: update feature checklist
