@@ -25,7 +25,7 @@ _Last updated: 2026-07-06_
 
 | Capability | Status | Spec ref | Notes |
 |------------|--------|----------|-------|
-| Raise a one-off task from a template | ⬜ Not started | | |
+| Raise a one-off task from a template | 🟡 In progress | BR-PA-1 | Slice 1: on-demand raise from a template |
 | Schedule a recurring task that raises itself automatically | ⬜ Not started | | |
 | Define the fields a template captures | ⬜ Not started | | |
 | Restrict who is allowed to create each task type | ⬜ Not started | | |
@@ -34,15 +34,15 @@ _Last updated: 2026-07-06_
 
 | Capability | Status | Spec ref | Notes |
 |------------|--------|----------|-------|
-| Route a task through a sequence of approval steps | ⬜ Not started | | |
-| Configure the teams and the order they approve in | ⬜ Not started | | |
-| Support a single approving team or many teams in one flow | ⬜ Not started | | |
+| Route a task through a sequence of approval steps | 🟡 In progress | BR-PA-2, BR-PA-4, BR-PA-8 | Sequential steps; advance only on approval; one active holder |
+| Configure the teams and the order they approve in | 🟡 In progress | BR-PA-2, BR-PA-3 | Steps as config (order, one team each); no code change |
+| Support a single approving team or many teams in one flow | 🟡 In progress | BR-PA-2 | 1..N steps, one team or many |
 
 ## 3. Assignment & fallback
 
 | Capability | Status | Spec ref | Notes |
 |------------|--------|----------|-------|
-| Assign to a primary person (PIC #1) | ⬜ Not started | | |
+| Assign to a primary person (PIC #1) | 🟡 In progress | BR-PA-3, BR-PA-7 | Single assignee per step this slice; PIC #2/boss fallback deferred |
 | Fall back to a second person (PIC #2) if needed | ⬜ Not started | | |
 | Fall back to the team boss as the final holder | ⬜ Not started | | |
 | Give each person their own response window | ⬜ Not started | | |
@@ -68,10 +68,10 @@ _Last updated: 2026-07-06_
 
 | Capability | Status | Spec ref | Notes |
 |------------|--------|----------|-------|
-| Approve a task | ⬜ Not started | | |
+| Approve a task | 🟡 In progress | BR-PA-5, BR-PA-6, BR-PA-7, BR-PA-9 | Approve advances/closes; only the assignee may approve; requester may never approve own task |
 | Reject a task with a mandatory reason | ⬜ Not started | | |
 | Let a boss review a decision | ⬜ Not started | | |
-| Choose whether an edit resumes or restarts the flow from zero | ⬜ Not started | | Restart-from-zero behaviour is an open spec decision |
+| Choose whether an edit resumes or restarts the flow from zero | 🟡 In progress | BR-PA-10, BR-PA-11 | Decided (D-2/D-6): details locked, notes only; edit & resubmit restarts from step 1 |
 
 ## 7. Request for information
 
@@ -94,14 +94,14 @@ _Last updated: 2026-07-06_
 
 | Capability | Status | Spec ref | Notes |
 |------------|--------|----------|-------|
-| Cancel a task before it is approved | ⬜ Not started | | |
-| Record the cancellation (kept as a status, never deleted) | ⬜ Not started | | |
+| Cancel a task before it is approved | 🟡 In progress | BR-PA-12 | Cancellable any time before approval |
+| Record the cancellation (kept as a status, never deleted) | 🟡 In progress | BR-PA-12, BR-PA-13 | Status change, no hard-delete |
 
 ## 10. Business-time & calendar
 
 | Capability | Status | Spec ref | Notes |
 |------------|--------|----------|-------|
-| Measure all timing in business hours as the base unit | ⬜ Not started | | Days/half-days are derived from working hours |
+| Measure all timing in business hours as the base unit | 🟡 In progress | BR-PA-16 | Modelling note only this slice: timestamps stored UTC, no timing enforced yet; days/half-days derived from working hours |
 | Apply a shared working calendar (working hours per day, non-working weekdays) | ⬜ Not started | | |
 | Pause timing on public holidays | ⬜ Not started | | |
 
@@ -127,7 +127,7 @@ _Last updated: 2026-07-06_
 
 | Capability | Status | Spec ref | Notes |
 |------------|--------|----------|-------|
-| Keep an immutable, append-only record of every action | ⬜ Not started | | |
+| Keep an immutable, append-only record of every action | 🟡 In progress | BR-PA-14, BR-PA-15 | Append-only audit per action; never edited/deleted |
 | Show a full timeline for each task | ⬜ Not started | | |
 
 ## 14. Integrations
